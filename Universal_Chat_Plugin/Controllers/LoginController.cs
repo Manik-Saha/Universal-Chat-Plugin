@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Universal_Chat_Plugin.Models;
 
 namespace Universal_Chat_Plugin.Controllers
 {
@@ -19,8 +20,7 @@ namespace Universal_Chat_Plugin.Controllers
         {
             if (ModelState.IsValid)
             {
-                Database db = new Database();
-                bool b = db.Admins.CheckAdmin(m);
+                bool b = true;
                 if (b)
                 {
                     return RedirectToAction("Index", "Admin");
