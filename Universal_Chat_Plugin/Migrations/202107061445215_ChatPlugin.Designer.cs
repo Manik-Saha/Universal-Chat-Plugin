@@ -7,13 +7,13 @@ namespace Universal_Chat_Plugin.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class InitDB : IMigrationMetadata
+    public sealed partial class ChatPlugin : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitDB));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ChatPlugin));
         
         string IMigrationMetadata.Id
         {
-            get { return "202107050934107_InitDB"; }
+            get { return "202107061445215_ChatPlugin"; }
         }
         
         string IMigrationMetadata.Source

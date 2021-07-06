@@ -12,165 +12,167 @@
     <title>Create</title>
 </head>
 <body>
-    <form action="/Admin/Create" method="post">
-        <input name="__RequestVerificationToken" type="hidden" value="24GR-f0_TG_lLqdPm9_HC_V5KsFXJDsly4EnLiR3zjTWfspgvxBOSO18fosvsiDtTDs7Hqy-zAJMLz9uXtOShBqPncvx9_q4hl9OmyNOqbg1" />        <div class="form-horizontal">
-            <h4>Register Admin</h4>
-            <hr />
-            <fieldset>
-                <div class="form-group">
-                    <label class="control-label col-md-2" for="First_name">First_name</label>
-                    <div class="col-md-10">
-                        <input class="form-control text-box single-line" id="First_name" name="First_name" type="text" value="" />
-                        <span class="field-validation-valid text-danger" data-valmsg-for="First_name" data-valmsg-replace="true"></span>
+    <div>
+        <form action="/Admin/Create" method="post">
+            <input name="__RequestVerificationToken" type="hidden" value="24GR-f0_TG_lLqdPm9_HC_V5KsFXJDsly4EnLiR3zjTWfspgvxBOSO18fosvsiDtTDs7Hqy-zAJMLz9uXtOShBqPncvx9_q4hl9OmyNOqbg1" />        <div class="form-horizontal">
+                <h4>Register Admin</h4>
+                <hr />
+                <fieldset>
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="First_name">First_name</label>
+                        <div class="col-md-10">
+                            <input class="form-control text-box single-line" id="First_name" name="First_name" type="text" value="" />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="First_name" data-valmsg-replace="true"></span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-md-2" for="Last_name">Last_name</label>
-                    <div class="col-md-10">
-                        <input class="form-control text-box single-line" id="Last_name" name="Last_name" type="text" value="" />
-                        <span class="field-validation-valid text-danger" data-valmsg-for="Last_name" data-valmsg-replace="true"></span>
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="Last_name">Last_name</label>
+                        <div class="col-md-10">
+                            <input class="form-control text-box single-line" id="Last_name" name="Last_name" type="text" value="" />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Last_name" data-valmsg-replace="true"></span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-md-2" for="Password">Password</label>
-                    <div class="col-md-10">
-                        <input class="form-control text-box single-line" id="Password" name="Password" type="text" value="" />
-                        <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="Password">Password</label>
+                        <div class="col-md-10">
+                            <input class="form-control text-box single-line" id="Password" name="Password" type="text" value="" />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-md-2" for="CPassword">Confirm Password</label>
-                    <div class="col-md-10">
-                        <input class="form-control text-box single-line" id="CPassword" name="CPassword" type="text" value="" />
-                        <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="CPassword">Confirm Password</label>
+                        <div class="col-md-10">
+                            <input class="form-control text-box single-line" id="CPassword" name="CPassword" type="text" value="" />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-md-2" for="Username">Username</label>
-                    <div class="col-md-10">
-                        <input class="form-control text-box single-line" id="Username" name="Username" type="text" value="" />
-                        <span class="field-validation-valid text-danger" data-valmsg-for="Username" data-valmsg-replace="true"></span>
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="Username">Username</label>
+                        <div class="col-md-10">
+                            <input class="form-control text-box single-line" id="Username" name="Username" type="text" value="" />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Username" data-valmsg-replace="true"></span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-md-2" for="Gender">Gender</label>
-                    <div class="col-md-10">
-                        <table>
-                            <tr>
-                                <td>
-                                    <input type="radio" name="Gender" id="Gender" value="Male">
-                                    <label>Male</label>
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="Gender">Gender</label>
+                        <div class="col-md-10">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="radio" name="Gender" id="Gender" value="Male">
+                                        <label>Male</label>
 
-                                    <input type="radio" name="Gender" id="Gender" value="Female">
-                                    <label>Female</label>
-                                </td>
-                            </tr>
-                        </table>
-                        <span class="field-validation-valid text-danger" data-valmsg-for="Gender" data-valmsg-replace="true"></span>
+                                        <input type="radio" name="Gender" id="Gender" value="Female">
+                                        <label>Female</label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Gender" data-valmsg-replace="true"></span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-md-2" for="Addresss">Addresss</label>
-                    <div class="col-md-10">
-                        <input class="form-control text-box single-line" id="Addresss" name="Addresss" type="text" value="" />
-                        <span class="field-validation-valid text-danger" data-valmsg-for="Addresss" data-valmsg-replace="true"></span>
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="Addresss">Addresss</label>
+                        <div class="col-md-10">
+                            <input class="form-control text-box single-line" id="Addresss" name="Addresss" type="text" value="" />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Addresss" data-valmsg-replace="true"></span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-md-2" for="Email">Email</label>
-                    <div class="col-md-10">
-                        <input class="form-control text-box single-line" id="Email" name="Email" type="text" value="" />
-                        <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="Email">Email</label>
+                        <div class="col-md-10">
+                            <input class="form-control text-box single-line" id="Email" name="Email" type="text" value="" />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-md-2" for="Phone">Phone</label>
-                    <div class="col-md-10">
-                        <input class="form-control text-box single-line" id="Phone" name="Phone" type="text" value="" />
-                        <span class="field-validation-valid text-danger" data-valmsg-for="Phone" data-valmsg-replace="true"></span>
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="Phone">Phone</label>
+                        <div class="col-md-10">
+                            <input class="form-control text-box single-line" id="Phone" name="Phone" type="text" value="" />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Phone" data-valmsg-replace="true"></span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-md-2" for="DateOfBirth">DateOfBirth</label>
-                    <div class="col-md-10">
-                        <input class="form-control text-box single-line" data-val="true" data-val-date="The field DateOfBirth must be a date." data-val-required="The DateOfBirth field is required." id="DateOfBirth" name="DateOfBirth" type="date" value="" />
-                        <span class="field-validation-valid text-danger" data-valmsg-for="DateOfBirth" data-valmsg-replace="true"></span>
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="DateOfBirth">DateOfBirth</label>
+                        <div class="col-md-10">
+                            <input class="form-control text-box single-line" data-val="true" data-val-date="The field DateOfBirth must be a date." data-val-required="The DateOfBirth field is required." id="DateOfBirth" name="DateOfBirth" type="date" value="" />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="DateOfBirth" data-valmsg-replace="true"></span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-md-2" for="JoiningDate">JoiningDate</label>
-                    <div class="col-md-10">
-                        <input class="form-control text-box single-line" data-val="true" data-val-date="The field JoiningDate must be a date." data-val-required="The JoiningDate field is required." id="JoiningDate" name="JoiningDate" type="date" value="" />
-                        <span class="field-validation-valid text-danger" data-valmsg-for="JoiningDate" data-valmsg-replace="true"></span>
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="JoiningDate">JoiningDate</label>
+                        <div class="col-md-10">
+                            <input class="form-control text-box single-line" data-val="true" data-val-date="The field JoiningDate must be a date." data-val-required="The JoiningDate field is required." id="JoiningDate" name="JoiningDate" type="date" value="" />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="JoiningDate" data-valmsg-replace="true"></span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-md-2" for="Marital_status">Marital_status</label>
-                    <div class="col-md-10">
-                        <table>
-                            <tr>
-                                <td>
-                                    <input type="radio" name="Marital_status" id="Marital_status" value="Married">
-                                    <label>Married</label>
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="Marital_status">Marital_status</label>
+                        <div class="col-md-10">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="radio" name="Marital_status" id="Marital_status" value="Married">
+                                        <label>Married</label>
 
-                                    <input type="radio" name="Marital_status" id="Marital_status" value="Unmarried">
-                                    <label>Unmarried</label>
-                                </td>
-                            </tr>
-                        </table>
-                        <span class="field-validation-valid text-danger" data-valmsg-for="Marital_status" data-valmsg-replace="true"></span>
+                                        <input type="radio" name="Marital_status" id="Marital_status" value="Unmarried">
+                                        <label>Unmarried</label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Marital_status" data-valmsg-replace="true"></span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-md-2" for="Blood_group">Blood_group</label>
-                    <div class="col-md-10">
-                        <table>
-                            <tr>
-                                <td>
-                                    <select name="Blood_group" id="Blood_group">
-                                        <option> </option>
-                                        <option value="A+">A+</option>
-                                        <option value="A-">A-</option>
-                                        <option value="B+">B+</option>
-                                        <option value="B-">B-</option>
-                                        <option value="O+">O+</option>
-                                        <option value="O-">O-</option>
-                                        <option value="AB+">AB+</option>
-                                        <option value="AB-">AB-</option>
-                                    </select>
-                                </td>
-                            </tr>
-                        </table>
-                        <span class="field-validation-valid text-danger" data-valmsg-for="Blood_group" data-valmsg-replace="true"></span>
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="Blood_group">Blood_group</label>
+                        <div class="col-md-10">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <select name="Blood_group" id="Blood_group">
+                                            <option> </option>
+                                            <option value="A+">A+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="O+">O+</option>
+                                            <option value="O-">O-</option>
+                                            <option value="AB+">AB+</option>
+                                            <option value="AB-">AB-</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Blood_group" data-valmsg-replace="true"></span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-md-2" for="Salary">Salary</label>
-                    <div class="col-md-10">
-                        <input class="form-control text-box single-line" data-val="true" data-val-number="The field Salary must be a number." data-val-required="The Salary field is required." id="Salary" name="Salary" type="number" value="" />
-                        <span class="field-validation-valid text-danger" data-valmsg-for="Salary" data-valmsg-replace="true"></span>
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="Salary">Salary</label>
+                        <div class="col-md-10">
+                            <input class="form-control text-box single-line" data-val="true" data-val-number="The field Salary must be a number." data-val-required="The Salary field is required." id="Salary" name="Salary" type="number" value="" />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Salary" data-valmsg-replace="true"></span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Create" class="btn btn-block" />
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Create" class="btn btn-block" />
+                        </div>
                     </div>
-                </div>
-            </fieldset>
-    </form>
+                </fieldset>
+        </form>
+    </div>
 </body>
 </html>

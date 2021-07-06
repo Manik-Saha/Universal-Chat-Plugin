@@ -19,6 +19,7 @@ namespace Universal_Chat_Plugin.Models
         public int Due_amount { get; set; }
         //navigation property
         public Organization Organization { get; set; }
+        public User User { get; set; }
 
     }
 }
