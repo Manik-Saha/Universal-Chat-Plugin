@@ -1,121 +1,106 @@
 ﻿@model IEnumerable<Universal_Chat_Plugin.Models.Admin>
 
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>All</title>
-</head>
-<body>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
+<meta name="viewport" content="width=device-width" />
     <div>
         <form>
-            <table class="table table-bordered">
-                <tr>
-                    <th>
-                        @Html.DisplayNameFor(model => model.First_name)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Last_name)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Password)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Username)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Gender)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Addresss)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Email)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Phone)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.DateOfBirth)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.JoiningDate)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Marital_status)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Blood_group)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Salary)
-                    </th>
-                    <th></th>
-                </tr>
-
-                @foreach (var item in Model)
-                {
+            <fieldset>
+                <p class="text-danger">@ViewBag.msg</p>
+                <table class="table table-bordered">
                     <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.First_name)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Last_name)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Password)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Username)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Gender)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Addresss)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Email)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Phone)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.DateOfBirth)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.JoiningDate)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Marital_status)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Blood_group)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Salary)
-                        </td>
-                        <td>
-                            <a class="btn btn-success" href="/Admin/Edit/@item.Id">Edit</a>
-                        </td>
-                        <td>
-                            <a class="btn btn-default" href="/Admin/Details/@item.Id">Details</a>
-                        </td>
-                        <td>
-                            <a class="btn btn-danger" href="/Admin/Delete/@item.Id">Delete</a>
-                        </td>
+                        <th>
+                            @Html.DisplayNameFor(model => model.First_name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Last_name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Username)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Gender)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Addresss)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Phone)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DateOfBirth)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.JoiningDate)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Marital_status)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Blood_group)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Salary)
+                        </th>
+                        <th></th>
                     </tr>
-                }
-            </table>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.First_name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Last_name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Username)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Gender)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Addresss)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Phone)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DateOfBirth)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.JoiningDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Marital_status)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Blood_group)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Salary)
+                            </td>
+                            <td>
+                                <a class="btn btn-success" href="/Admin/Edit/@item.Id">Edit</a>
+                            </td>
+                            <td>
+                                <a class="btn btn-default" href="/Admin/Details/@item.Id">Details</a>
+                            </td>
+                            <td>
+                                <a class="btn btn-danger" href="/Admin/Delete/@item.Id">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </fieldset>
         </form>
     </div>
-</body>
-</html>

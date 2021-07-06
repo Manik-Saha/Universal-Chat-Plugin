@@ -17,14 +17,20 @@ namespace Universal_Chat_Plugin.Controllers
         }
         public ActionResult Create()
         {
-            return View();
+            Admin m = new Admin();
+            return View(m);
         }
         [HttpPost]
         public ActionResult Create(Admin m)
         {
-            context.Admins.Add(m);
-            context.SaveChanges();
-            return RedirectToAction("All");
+            if (ModelState.IsValid)
+            {
+                context.Admins.Add(m);
+                context.SaveChanges();
+                ViewBag.msg = "Added Successfully";
+                return RedirectToAction("All");
+            }
+            return RedirectToAction("Create");
         }
 
         public ActionResult All()
@@ -47,10 +53,15 @@ namespace Universal_Chat_Plugin.Controllers
         [HttpPost]
         public ActionResult Edit(Admin m)
         {
-            var oldAdmin = context.Admins.FirstOrDefault(e => e.Id == m.Id);
-            context.Entry(oldAdmin).CurrentValues.SetValues(m);
-            context.SaveChanges();
-            return RedirectToAction("All");
+            if (ModelState.IsValid)
+            {
+                var oldAdmin = context.Admins.FirstOrDefault(e => e.Id == m.Id);
+                context.Entry(oldAdmin).CurrentValues.SetValues(m);
+                context.SaveChanges();
+                ViewBag.msg = "Updated Successfully";
+                return RedirectToAction("All");
+            }
+            return RedirectToAction("Edit");
         }
 
         public ActionResult Delete(int Id)
@@ -65,6 +76,7 @@ namespace Universal_Chat_Plugin.Controllers
             var a = context.Admins.FirstOrDefault(e => e.Id == Id);
             context.Admins.Remove(a);
             context.SaveChanges();
+            ViewBag.msg = "Deleted Successfully";
             return RedirectToAction("All");
         }
     }

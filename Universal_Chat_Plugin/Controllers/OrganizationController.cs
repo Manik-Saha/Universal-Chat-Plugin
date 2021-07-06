@@ -1,0 +1,67 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using Universal_Chat_Plugin.Models;
+
+namespace Universal_Chat_Plugin.Controllers
+{
+    public class OrganizationController : Controller
+    {
+        UniversalChatPluginEntities context = new UniversalChatPluginEntities();
+        // GET: Organization
+        public ActionResult Index()
+        {
+            var organizations = context.Organizations.ToList();
+            return View(organizations);
+        }
+
+        public ActionResult Create()
+        {
+            Organization o = new Organization();
+            return View(o);
+        }
+        [HttpPost]
+        public ActionResult Create(Organization o)
+        {
+            context.Organizations.Add(o);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Details(int Id)
+        {
+            var o = context.Organizations.FirstOrDefault(e => e.Id == Id);
+            return View(o);
+        }
+
+        public ActionResult Edit(int Id)
+        {
+            var o = context.Organizations.FirstOrDefault(e => e.Id == Id);
+            return View(o);
+        }
+        [HttpPost]
+        public ActionResult Edit(Organization o)
+        {
+            var oldOrganization = context.Organizations.FirstOrDefault(e => e.Id == o.Id);
+            context.Entry(oldOrganization).CurrentValues.SetValues(o);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Delete(int Id)
+        {
+            var o = context.Organizations.FirstOrDefault(e => e.Id == Id);
+            return View(o);
+        }
+        [HttpPost]
+        public ActionResult Delete(Organization o, int Id)
+        {
+            var a = context.Organizations.FirstOrDefault(e => e.Id == Id);
+            context.Organizations.Remove(a);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+    }
+}

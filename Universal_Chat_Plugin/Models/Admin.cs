@@ -23,6 +23,7 @@ namespace Universal_Chat_Plugin.Models
         [Required]
         public string Addresss { get; set; }
         [Required]
+        [RegularExpression(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$", ErrorMessage = "Email is not valid.")]
         public string Email { get; set; }
         [Required]
         public string Phone { get; set; }

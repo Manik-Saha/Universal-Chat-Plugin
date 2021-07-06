@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -12,10 +13,15 @@ namespace Universal_Chat_Plugin.Models
             Payments = new HashSet<Payment>();
         }
         public int Id { get; set; }
+        [Required]
         public string Name { get; set; }
+        [Required]
         public string Email { get; set; }
+        [Required]
         public string Address { get; set; }
+        [Required]
         public string Phone { get; set; }
+        [Required]
         public string Website { get; set; }
         //navigation property
         public ICollection<Payment> Payments { get; set; }

@@ -13,7 +13,8 @@ namespace Universal_Chat_Plugin.Controllers
         // GET: Login
         public ActionResult Index()
         {
-            return View();
+            Admin m = new Admin();
+            return View(m);
         }
 
         [HttpPost]
@@ -21,10 +22,18 @@ namespace Universal_Chat_Plugin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var a = context.Admins.FirstOrDefault(e => e.Username == m.Username && e.Password == m.Password);
-                if (a != null)
+                var username = context.Admins.FirstOrDefault(e => e.Username == m.Username);
+                if (username != null)
                 {
-                    return RedirectToAction("Index", "Admin");
+                    var password = context.Admins.FirstOrDefault(e => e.Password == m.Password);
+                    if(password != null)
+                    {
+                        return RedirectToAction("Index", "Admin");
+                    }
+                    else
+                    {
+                        ViewBag.Error = "Your username & password does not match";
+                    }
                 }
                 else
                 {

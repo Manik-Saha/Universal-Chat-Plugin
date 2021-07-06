@@ -3,24 +3,17 @@
     Layout = null;
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <form action="/Login/Index" method="post">
-        <div>
+    <div>
+        <form action="/Login/Index" method="post">
             <fieldset>
                 <label><h2>Universal Chat Plugin</h2></label>
-                <h3>@ViewBag.Error</h3>
+                <p class="text-danger">@ViewBag.Error</p>
                 <input type="text" name="Username" placeholder="Username" value="" /><br />
+                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
                 <br /><input type="text" name="Password" placeholder="Password" value="" /><br />
-                <br /><input class="btn btn-default" type="submit" name="submit" value="Login" />
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                <br /><input class="btn btn-group" type="submit" name="submit" value="Login" />
             </fieldset>
-        </div>
-    </form>
-</body>
-</html>
+        </form>
+    </div>
+
