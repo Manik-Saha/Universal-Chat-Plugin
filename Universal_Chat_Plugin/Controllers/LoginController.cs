@@ -9,7 +9,7 @@ namespace Universal_Chat_Plugin.Controllers
     public class LoginController : Controller
     {
         // GET: Login
-        public ActionResult Index()
+        /*public ActionResult Index()
         {
             return View();
         }
@@ -31,6 +31,6 @@ namespace Universal_Chat_Plugin.Controllers
                 }
             }
             return View();
-        }
+        }*/
     }
 }
