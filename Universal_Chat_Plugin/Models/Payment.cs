@@ -8,6 +8,7 @@ namespace Universal_Chat_Plugin.Models
     public class Payment
     {
         public int Id { get; set; }
+        public int OrganizationId { get; set; }
         public string Payment_type { get; set; }
         public string Payment_status { get; set; }
         public int Card_no { get; set; }
@@ -16,7 +17,8 @@ namespace Universal_Chat_Plugin.Models
         public int Total_amount { get; set; }
         public int Paid_amount { get; set; }
         public int Due_amount { get; set; }
-
+        //navigation property
+        public Organization Organization { get; set; }
 
     }
 }

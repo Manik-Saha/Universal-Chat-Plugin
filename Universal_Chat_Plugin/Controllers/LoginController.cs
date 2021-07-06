@@ -9,6 +9,7 @@ namespace Universal_Chat_Plugin.Controllers
 {
     public class LoginController : Controller
     {
+        UniversalChatPluginEntities context = new UniversalChatPluginEntities();
         // GET: Login
         public ActionResult Index()
         {
@@ -20,8 +21,8 @@ namespace Universal_Chat_Plugin.Controllers
         {
             if (ModelState.IsValid)
             {
-                bool b = true;
-                if (b)
+                var a = context.Admins.FirstOrDefault(e => e.Username == m.Username && e.Password == m.Password);
+                if (a != null)
                 {
                     return RedirectToAction("Index", "Admin");
                 }

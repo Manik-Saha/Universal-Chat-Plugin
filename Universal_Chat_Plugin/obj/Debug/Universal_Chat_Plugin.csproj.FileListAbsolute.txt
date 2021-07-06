@@ -83,3 +83,4 @@ D:\ATP-2 ( .NET )\Universal_Chat_Plugin\Universal_Chat_Plugin\bin\EntityFramewor
 D:\ATP-2 ( .NET )\Universal_Chat_Plugin\Universal_Chat_Plugin\bin\EntityFramework.SqlServer.xml
 D:\ATP-2 ( .NET )\Universal_Chat_Plugin\Universal_Chat_Plugin\obj\Debug\Universal_Chat_Plugin.Migrations.InitDB.resources
 D:\ATP-2 ( .NET )\Universal_Chat_Plugin\Universal_Chat_Plugin\obj\Debug\Universal_Chat_Plugin.csproj.GenerateResource.cache
+D:\ATP-2 ( .NET )\Universal_Chat_Plugin\Universal_Chat_Plugin\obj\Debug\Universal_Chat_Plugin.Migrations.update.resources

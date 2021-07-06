@@ -9,6 +9,7 @@ namespace Universal_Chat_Plugin.Controllers
 {
     public class AdminController : Controller
     {
+        UniversalChatPluginEntities context = new UniversalChatPluginEntities();
         // GET: Admin
         public ActionResult Index()
         {
@@ -16,8 +17,55 @@ namespace Universal_Chat_Plugin.Controllers
         }
         public ActionResult Create()
         {
-            Admin m = new Admin();
-            return View(m);
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(Admin m)
+        {
+            context.Admins.Add(m);
+            context.SaveChanges();
+            return RedirectToAction("All");
+        }
+
+        public ActionResult All()
+        {
+            var admins = context.Admins.ToList();
+            return View(admins);
+        }
+
+        public ActionResult Details(int Id)
+        {
+            var a = context.Admins.FirstOrDefault(e=>e.Id == Id);
+            return View(a);
+        }
+
+        public ActionResult Edit(int Id)
+        {
+            var a = context.Admins.FirstOrDefault(e => e.Id == Id);
+            return View(a);
+        }
+        [HttpPost]
+        public ActionResult Edit(Admin m)
+        {
+            var oldAdmin = context.Admins.FirstOrDefault(e => e.Id == m.Id);
+            context.Entry(oldAdmin).CurrentValues.SetValues(m);
+            context.SaveChanges();
+            return RedirectToAction("All");
+        }
+
+        public ActionResult Delete(int Id)
+        {
+            var a = context.Admins.FirstOrDefault(e => e.Id == Id);
+            return View(a);
+        }
+        [HttpPost]
+
+        public ActionResult Delete(Admin m, int Id)
+        {
+            var a = context.Admins.FirstOrDefault(e => e.Id == Id);
+            context.Admins.Remove(a);
+            context.SaveChanges();
+            return RedirectToAction("All");
         }
     }
 }
