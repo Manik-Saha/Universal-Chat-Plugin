@@ -25,9 +25,13 @@ namespace Universal_Chat_Plugin.Controllers
         [HttpPost]
         public ActionResult Create(Organization o)
         {
-            context.Organizations.Add(o);
-            context.SaveChanges();
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                context.Organizations.Add(o);
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View();
         }
 
         public ActionResult Details(int Id)
@@ -44,10 +48,14 @@ namespace Universal_Chat_Plugin.Controllers
         [HttpPost]
         public ActionResult Edit(Organization o)
         {
-            var oldOrganization = context.Organizations.FirstOrDefault(e => e.Id == o.Id);
-            context.Entry(oldOrganization).CurrentValues.SetValues(o);
-            context.SaveChanges();
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                var oldOrganization = context.Organizations.FirstOrDefault(e => e.Id == o.Id);
+                context.Entry(oldOrganization).CurrentValues.SetValues(o);
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View();
         }
 
         public ActionResult Delete(int Id)

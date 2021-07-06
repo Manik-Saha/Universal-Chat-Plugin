@@ -30,7 +30,7 @@ namespace Universal_Chat_Plugin.Controllers
                 ViewBag.msg = "Added Successfully";
                 return RedirectToAction("All");
             }
-            return RedirectToAction("Create");
+            return View();
         }
 
         public ActionResult All()
@@ -61,7 +61,7 @@ namespace Universal_Chat_Plugin.Controllers
                 ViewBag.msg = "Updated Successfully";
                 return RedirectToAction("All");
             }
-            return RedirectToAction("Edit");
+            return View();
         }
 
         public ActionResult Delete(int Id)
