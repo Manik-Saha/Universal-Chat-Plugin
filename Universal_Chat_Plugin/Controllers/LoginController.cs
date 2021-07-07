@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using Universal_Chat_Plugin.Models;
 
 namespace Universal_Chat_Plugin.Controllers
@@ -10,6 +11,8 @@ namespace Universal_Chat_Plugin.Controllers
     public class LoginController : Controller
     {
         UniversalChatPluginEntities context = new UniversalChatPluginEntities();
+        Admin username = null;
+        Admin password = null;
         // GET: Login
         public ActionResult Index()
         {
@@ -18,29 +21,29 @@ namespace Universal_Chat_Plugin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(Admin m)
+        public ActionResult Index(Admin m, string returnUrl)
         {
-            if (ModelState.IsValid)
-            {
-                var username = context.Admins.FirstOrDefault(e => e.Username == m.Username);
+                username = context.Admins.FirstOrDefault(e => e.Username == m.Username);
                 if (username != null)
                 {
-                    var password = context.Admins.FirstOrDefault(e => e.Password == m.Password);
+                    password = context.Admins.FirstOrDefault(e => e.Password == m.Password);
                     if(password != null)
                     {
-                        return RedirectToAction("Index", "Admin");
+                        FormsAuthentication.SetAuthCookie(m.Username, false);
+                    return RedirectToAction("Index", "Admin");
                     }
                     else
                     {
                         ViewBag.Error = "Your username & password does not match";
                     }
                 }
-                else
-                {
-                    ViewBag.Error = "Your username & password does not match";
-                }
-            }
             return View();
+        }
+
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return Redirect("/Admin/Index");
         }
     }
 }
