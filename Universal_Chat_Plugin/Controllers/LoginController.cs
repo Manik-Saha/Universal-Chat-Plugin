@@ -43,7 +43,7 @@ namespace Universal_Chat_Plugin.Controllers
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
-            return Redirect("/Admin/Index");
+            return Redirect("/Login/Index");
         }
     }
 }

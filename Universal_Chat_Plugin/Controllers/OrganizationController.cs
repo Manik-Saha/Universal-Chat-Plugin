@@ -7,6 +7,7 @@ using Universal_Chat_Plugin.Models;
 
 namespace Universal_Chat_Plugin.Controllers
 {
+    [Authorize]
     public class OrganizationController : Controller
     {
         UniversalChatPluginEntities context = new UniversalChatPluginEntities();

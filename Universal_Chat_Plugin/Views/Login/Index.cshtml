@@ -3,17 +3,17 @@
     Layout = null;
 }
 
-    <div>
-        <form action="/Login/Index?returnUrl=@Request.QueryString["ReturnUrl"]" method="post">
-            <fieldset>
-                <label><h2>Universal Chat Plugin</h2></label>
-                <p class="text-danger">@ViewBag.Error</p>
-                <input class="form-control" type="text" name="Username" placeholder="Username" value="" /><br />
-                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
-                <br /><input class="form-control" type="text" name="Password" placeholder="Password" value="" /><br />
-                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
-                <br /><input class="btn btn-group" type="submit" name="submit" value="Login" />
-            </fieldset>
-        </form>
-    </div>
+<div>
+    <form action="/Login/Index?returnUrl=@Request.QueryString["ReturnUrl"]" method="post">
+        <fieldset>
+            <label><h2>Universal Chat Plugin</h2></label>
+            <p style="color:red">@ViewBag.Error</p>
+            <input class="form-control" type="text" name="Username" placeholder="Username" value="" /><br />
+            <p style="color:red">@Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })</p>
+            <input class="form-control" type="text" name="Password" placeholder="Password" value="" /><br />
+            <p style="color:red">@Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })</p>
+            <br /><input class="btn btn-group" type="submit" name="submit" value="Login" />
+        </fieldset>
+    </form>
+</div>
 
