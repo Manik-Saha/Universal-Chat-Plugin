@@ -20,6 +20,10 @@ namespace Universal_Chat_Plugin.Models
         [Required]
         public string Address { get; set; }
         [Required]
+        public string Username { get; set; }
+        [Required]
+        public string Password { get; set; }
+        [Required]
         public string Phone { get; set; }
         [Required]
         public string Website { get; set; }

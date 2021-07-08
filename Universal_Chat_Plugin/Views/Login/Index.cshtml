@@ -1,4 +1,4 @@
-﻿@model Universal_Chat_Plugin.Models.Admin
+﻿@model Universal_Chat_Plugin.Models.Login
 @{
     Layout = null;
 }
@@ -8,11 +8,11 @@
         <fieldset>
             <label><h2>Universal Chat Plugin</h2></label>
             <p style="color:red">@ViewBag.Error</p>
-            <input class="form-control" type="text" name="Username" placeholder="Username" value="" /><br />
+            <input class="form-control text-box single-line" type="text" name="Username" placeholder="Username" value="" /><br />
             <p style="color:red">@Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })</p>
-            <input class="form-control" type="text" name="Password" placeholder="Password" value="" /><br />
+            <input class="form-control text-box single-line" type="password" name="Password" placeholder="Password" value="" /><br />
             <p style="color:red">@Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })</p>
-            <br /><input class="btn btn-group" type="submit" name="submit" value="Login" />
+            <input class="btn btn-success" type="submit" name="submit" value="Login" />
         </fieldset>
     </form>
 </div>

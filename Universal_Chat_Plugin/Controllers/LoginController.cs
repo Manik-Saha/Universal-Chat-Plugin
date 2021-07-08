@@ -11,32 +11,61 @@ namespace Universal_Chat_Plugin.Controllers
     public class LoginController : Controller
     {
         UniversalChatPluginEntities context = new UniversalChatPluginEntities();
-        Admin username = null;
-        Admin password = null;
         // GET: Login
         public ActionResult Index()
         {
-            Admin m = new Admin();
-            return View(m);
+            Login l = new Login();
+            return View(l);
         }
 
         [HttpPost]
-        public ActionResult Index(Admin m, string returnUrl)
+        public ActionResult Index(Login m, string returnUrl)
         {
-                username = context.Admins.FirstOrDefault(e => e.Username == m.Username);
-                if (username != null)
+            if (ModelState.IsValid)
+            {
+                var admin = context.Admins.FirstOrDefault(e => e.Username == m.Username);
+                var organization = context.Organizations.FirstOrDefault(e => e.Username == m.Username);
+                var user = context.Users.FirstOrDefault(e => e.Username == m.Username);
+                if (admin != null)
                 {
-                    password = context.Admins.FirstOrDefault(e => e.Password == m.Password);
-                    if(password != null)
+                    var password = context.Admins.FirstOrDefault(e => e.Password == m.Password);
+                    if (password != null)
                     {
                         FormsAuthentication.SetAuthCookie(m.Username, false);
-                    return RedirectToAction("Index", "Admin");
+                        return RedirectToAction("Index", "Admin");
                     }
                     else
                     {
                         ViewBag.Error = "Your username & password does not match";
                     }
                 }
+                if(organization != null)
+                {
+                    var password = context.Organizations.FirstOrDefault(e => e.Password == m.Password);
+                    if (password != null)
+                    {
+                        FormsAuthentication.SetAuthCookie(m.Username, false);
+                        return RedirectToAction("Index", "Organization");
+                    }
+                    else
+                    {
+                        ViewBag.Error = "Your username & password does not match";
+                    }
+                }
+                if (user != null)
+                {
+                    var password = context.Users.FirstOrDefault(e => e.Password == m.Password);
+                    if (password != null)
+                    {
+                        FormsAuthentication.SetAuthCookie(m.Username, false);
+                        return RedirectToAction("Index", "User");
+                    }
+                    else
+                    {
+                        ViewBag.Error = "Your username & password does not match";
+                    }
+                }
+            }
             return View();
         }
 

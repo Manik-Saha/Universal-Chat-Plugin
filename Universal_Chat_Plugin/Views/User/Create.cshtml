@@ -1,0 +1,92 @@
+﻿@model Universal_Chat_Plugin.Models.User
+
+@{
+    ViewBag.Title = "Index";
+}
+<div>
+    <form action="/User/Create" method="post">
+        <input name="__RequestVerificationToken" type="hidden" value="6aLA4FwCI_CYF4N30OpqANCs_hFMLWonQFbHFfTZ3NqSBB0_aG7az006tD_fb4aS4D0zwwTcBqUZjSFKL7_a-R3XEjUCElIg8va2fmKaAas1" />
+
+
+        <div class="form-horizontal">
+            <h4>User</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.First_name, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <input class="form-control text-box single-line" data-val="true" data-val-required="The First_name field is required." id="First_name" name="First_name" type="text" value="" />
+                    @Html.ValidationMessageFor(model => model.First_name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Last_name, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <input class="form-control text-box single-line" data-val="true" data-val-required="The Last_name field is required." id="Last_name" name="Last_name" type="text" value="" />
+                    @Html.ValidationMessageFor(model => model.Last_name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <input class="form-control text-box single-line" data-val="true" data-val-required="The Password field is required." id="Password" name="Password" type="text" value="" />
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <input class="form-control text-box single-line" data-val="true" data-val-required="The Username field is required." id="Username" name="Username" type="text" value="" />
+                    @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2" for="Gender">Gender</label>
+                <div class="col-md-10">
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="radio" name="Gender" id="Gender" value="Male">
+                                <label>Male</label>
+
+                                <input type="radio" name="Gender" id="Gender" value="Female">
+                                <label>Female</label>
+                            </td>
+                        </tr>
+                    </table>
+                    @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <input class="form-control text-box single-line" data-val="true" data-val-required="The Email field is required." id="Email" name="Email" type="text" value="" />
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <input class="form-control text-box single-line" data-val="true" data-val-required="The Phone field is required." id="Phone" name="Phone" type="text" value="" />
+                    @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+    <div>
+        <a class="btn btn-toolbar" href ="/User">Back to List</a>
+    </div>
+

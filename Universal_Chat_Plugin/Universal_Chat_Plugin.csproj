@@ -130,6 +130,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OrganizationController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -141,8 +142,13 @@
     <Compile Include="Migrations\202107061827488_ChatPlugin1.designer.cs">
       <DependentUpon>202107061827488_ChatPlugin1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202107081650116_ChatPlugin2.cs" />
+    <Compile Include="Migrations\202107081650116_ChatPlugin2.designer.cs">
+      <DependentUpon>202107081650116_ChatPlugin2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Organization.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\UniversalChatPluginEntities.cs" />
@@ -194,6 +200,11 @@
     <Content Include="Views\Organization\Details.cshtml" />
     <Content Include="Views\Organization\Edit.cshtml" />
     <Content Include="Views\Organization\Delete.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\User\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -217,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107061827488_ChatPlugin1.resx">
       <DependentUpon>202107061827488_ChatPlugin1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107081650116_ChatPlugin2.resx">
+      <DependentUpon>202107081650116_ChatPlugin2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,12 +1,11 @@
-﻿@model Universal_Chat_Plugin.Models.Admin
+﻿@model Universal_Chat_Plugin.Models.User
 
 @{
     ViewBag.Title = "Index";
 }
 
-<div>
-    <fieldset>
-        <h4>Admin</h4>
+    <div>
+        <h4>User</h4>
         <hr />
         <dl class="dl-horizontal">
             <dt>
@@ -50,14 +49,6 @@
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.Addresss)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Addresss)
-            </dd>
-
-            <dt>
                 @Html.DisplayNameFor(model => model.Email)
             </dt>
 
@@ -73,46 +64,9 @@
                 @Html.DisplayFor(model => model.Phone)
             </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.DateOfBirth)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.DateOfBirth)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.JoiningDate)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.JoiningDate)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Marital_status)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Marital_status)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Blood_group)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Blood_group)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Salary)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Salary)
-            </dd>
-
         </dl>
-    </fieldset>
-</div>
+    </div>
+    <p>
+        <a class="btn btn-success" href="/User">Back to List</a>
+    </p>
+

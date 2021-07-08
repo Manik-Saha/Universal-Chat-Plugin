@@ -3,59 +3,82 @@
 @{
     ViewBag.Title = "Index";
 }
-
+<div>
     <form action="/Organization/Create" method="post">
-        <input name="__RequestVerificationToken" type="hidden" value="orB5KWwl5NcbV0-epohoU8NafyC8pzajHgUG9Q2GvUimSeQV8tBaPyJ_PGwO1LFNspNqvudcDNBAEP6iYHylQJsRlrCYZwA84KFjNGEHFIw1" />        <div class="form-horizontal">
-            <h4>Organization</h4>
-            <hr />
+        <input name="__RequestVerificationToken" type="hidden" value="orB5KWwl5NcbV0-epohoU8NafyC8pzajHgUG9Q2GvUimSeQV8tBaPyJ_PGwO1LFNspNqvudcDNBAEP6iYHylQJsRlrCYZwA84KFjNGEHFIw1" />        <iv class="form-horizontal">
+    <h4>Register Organization</h4>
+    <hr />
 
-            <div class="form-group">
-                <label class="control-label col-md-2" for="Name">Name</label>
-                <div class="col-md-10">
-                    <input class="form-control text-box single-line" id="Name" name="Name" type="text" value="" />
-                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="control-label col-md-2" for="Email">Email</label>
-                <div class="col-md-10">
-                    <input class="form-control text-box single-line" id="Email" name="Email" type="text" value="" />
-                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="control-label col-md-2" for="Address">Address</label>
-                <div class="col-md-10">
-                    <input class="form-control text-box single-line" id="Address" name="Address" type="text" value="" />
-                    @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="control-label col-md-2" for="Phone">Phone</label>
-                <div class="col-md-10">
-                    <input class="form-control text-box single-line" id="Phone" name="Phone" type="text" value="" />
-                    @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="control-label col-md-2" for="Website">Website</label>
-                <div class="col-md-10">
-                    <input class="form-control text-box single-line" id="Website" name="Website" type="text" value="" />
-                    @Html.ValidationMessageFor(model => model.Website, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
-                </div>
-            </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="Name">Name</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="Name" name="Name" type="text" value="" />
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
         </div>
-    </form>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="Email">Email</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="Email" name="Email" type="text" value="" />
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="Password">Password</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="Password" name="Password" type="password" value="" />
+            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="CPassword">Confirm Password</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="CPassword" name="CPassword" type="password" value="" />
+            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="Username">Username</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="Username" name="Username" type="text" value="" />
+            @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="Address">Address</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="Address" name="Address" type="text" value="" />
+            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="Phone">Phone</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="Phone" name="Phone" type="text" value="" />
+            @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="Website">Website</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="Website" name="Website" type="text" value="" />
+            @Html.ValidationMessageFor(model => model.Website, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</form>
+</div>
     <div>
         <a class="btn btn-success" href="/Organization">Back to List</a>
     </div>
