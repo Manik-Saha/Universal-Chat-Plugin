@@ -86,7 +86,7 @@
         <div class="form-group">
             <label class="control-label col-md-2" for="DateOfBirth">DateOfBirth</label>
             <div class="col-md-10">
-                <input class="form-control text-box single-line" data-val="true" data-val-date="The field DateOfBirth must be a date." data-val-required="The DateOfBirth field is required." id="DateOfBirth" name="DateOfBirth" type="date" value="@Model.DateOfBirth.Date" />
+                <input class="form-control text-box single-line" data-val="true" data-val-date="The field DateOfBirth must be a date." data-val-required="The DateOfBirth field is required." id="DateOfBirth" name="DateOfBirth" type="date" value="@Model.DateOfBirth.Date.ToString("yyyy MM dd")" />
                 @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })
             </div>
         </div>
