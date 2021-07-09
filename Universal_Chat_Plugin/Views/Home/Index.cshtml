@@ -17,26 +17,32 @@
         background-image: url('/image/i.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-size: cover;
+        background-size: 100% 100%;
     }
 </style>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
+                <div class="top">
+                    <ul class="nav navbar-nav">
+                        <h3 style="color:white">Universal-Chat-Plugin</h3>
+                    </ul>
+                    <div class="top-right">
+                        <p style="padding-left:900px">
+                            <a href="/Login/Index" class="btn btn-success">Login</a>
+                            <a href="/Home/UserRegistration" class="btn btn-danger">Register user</a>
+                        </p>
+                    </div>
+                </div>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="/Login/Index">Login</a></li>
-                    <li><a href="/Home/UserRegistration">Register user</a></li>
-                </ul>
-            </div>
         </div>
     </div>
+    <h1 style="text-align:center; font-family:Algerian">Welcome to our universal chat plugin!</h1>
 </body>
 </html>

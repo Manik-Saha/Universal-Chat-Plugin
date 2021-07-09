@@ -3,14 +3,37 @@
 @{
     Layout = null;
 }
-<div>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <div class="top">
+                <ul class="nav navbar-nav">
+                    <h3 style="color:white">Universal-Chat-Plugin</h3>
+                </ul>
+                <div class="top-right">
+                    <p style="padding-left:900px">
+                        <a href="/Login/Index" class="btn btn-success">Login</a>
+                    </p>
+                </div>
+            </div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
     <form action="/Home/UserRegistration" method="post">
         <h3><p style="text-align:center;background-color:goldenrod" class="text-danger">@TempData["msg"]</p></h3><br />
         <input name="__RequestVerificationToken" type="hidden" value="6aLA4FwCI_CYF4N30OpqANCs_hFMLWonQFbHFfTZ3NqSBB0_aG7az006tD_fb4aS4D0zwwTcBqUZjSFKL7_a-R3XEjUCElIg8va2fmKaAas1" />
 
 
-        <div class="form-horizontal">
-            <h4>User</h4>
+        <div class="form-horizontal" >
+            <h4>User Registration</h4>
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             <div class="form-group">
@@ -81,7 +104,7 @@
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
+                    <input type="submit" value="Create" class="btn btn-success" />
                 </div>
             </div>
         </div>
