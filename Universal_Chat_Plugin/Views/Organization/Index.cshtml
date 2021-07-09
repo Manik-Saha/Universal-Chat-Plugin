@@ -7,58 +7,64 @@
 <div>
     <br /><a class="btn btn-success" href="/Organization/Create">Register new organization</a><br />
 </div>
-
-    <table class="table table-bordered">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Phone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Website)
-            </th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
+    <h3><p style="text-align:center;background-color:goldenrod" class="text-danger">@TempData["msg"]</p></h3><br />
+<table class="table table-bordered">
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Phone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Website)
-        </td>
-        <td>
-            <a class="btn btn-success" href="/Organization/Edit/@item.Id">Edit</a>
-        </td>
-        <td>
-            <a class="btn btn-default" href="/Organization/Details/@item.Id">Details</a>
-        </td>
-        <td>
-            <a class="btn btn-danger" href="/Organization/Delete/@item.Id">Delete</a>
-        </td>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Website)
+        </th>
+        <th></th>
+        <th></th>
+        <th></th>
     </tr>
 
-         }
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Website)
+            </td>
+            <td>
+                <a class="btn btn-success" href="/Organization/Edit/@item.Id">Edit</a>
+            </td>
+            <td>
+                <a class="btn btn-default" href="/Organization/Details/@item.Id">Details</a>
+            </td>
+            <td>
+                <a class="btn btn-danger" href="/Organization/Delete/@item.Id">Delete</a>
+            </td>
+        </tr>
 
-    </table>
+    }
+
+</table>

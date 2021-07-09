@@ -28,7 +28,7 @@ namespace Universal_Chat_Plugin.Controllers
             {
                 context.Admins.Add(m);
                 context.SaveChanges();
-                ViewBag.msg = "Added Successfully";
+                TempData["msg"] = "Added Successfully";
                 return RedirectToAction("All");
             }
             return View();
@@ -59,7 +59,7 @@ namespace Universal_Chat_Plugin.Controllers
                 var oldAdmin = context.Admins.FirstOrDefault(e => e.Id == m.Id);
                 context.Entry(oldAdmin).CurrentValues.SetValues(m);
                 context.SaveChanges();
-                ViewBag.msg = "Updated Successfully";
+                TempData["msg"] = "Updated Successfully";
                 return RedirectToAction("All");
             }
             return View();
@@ -77,7 +77,7 @@ namespace Universal_Chat_Plugin.Controllers
             var a = context.Admins.FirstOrDefault(e => e.Id == Id);
             context.Admins.Remove(a);
             context.SaveChanges();
-            ViewBag.msg = "Deleted Successfully";
+            TempData["msg"] = "Deleted Successfully";
             return RedirectToAction("All");
         }
     }

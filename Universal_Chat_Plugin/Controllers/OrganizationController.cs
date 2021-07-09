@@ -30,6 +30,7 @@ namespace Universal_Chat_Plugin.Controllers
             {
                 context.Organizations.Add(o);
                 context.SaveChanges();
+                TempData["msg"] = "Added Successfully";
                 return RedirectToAction("Index");
             }
             return View();
@@ -54,6 +55,7 @@ namespace Universal_Chat_Plugin.Controllers
                 var oldOrganization = context.Organizations.FirstOrDefault(e => e.Id == o.Id);
                 context.Entry(oldOrganization).CurrentValues.SetValues(o);
                 context.SaveChanges();
+                TempData["msg"] = "Updated Successfully";
                 return RedirectToAction("Index");
             }
             return View();
@@ -70,6 +72,7 @@ namespace Universal_Chat_Plugin.Controllers
             var a = context.Organizations.FirstOrDefault(e => e.Id == Id);
             context.Organizations.Remove(a);
             context.SaveChanges();
+            TempData["msg"] = "Deleted Successfully";
             return RedirectToAction("Index");
         }
     }

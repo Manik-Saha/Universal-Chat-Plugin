@@ -142,10 +142,6 @@
     <Compile Include="Migrations\202107061827488_ChatPlugin1.designer.cs">
       <DependentUpon>202107061827488_ChatPlugin1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202107081650116_ChatPlugin2.cs" />
-    <Compile Include="Migrations\202107081650116_ChatPlugin2.designer.cs">
-      <DependentUpon>202107081650116_ChatPlugin2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Login.cs" />
@@ -228,9 +224,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107061827488_ChatPlugin1.resx">
       <DependentUpon>202107061827488_ChatPlugin1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107081650116_ChatPlugin2.resx">
-      <DependentUpon>202107081650116_ChatPlugin2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

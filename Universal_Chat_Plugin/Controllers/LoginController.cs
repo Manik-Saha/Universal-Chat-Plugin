@@ -39,7 +39,7 @@ namespace Universal_Chat_Plugin.Controllers
                         ViewBag.Error = "Your username & password does not match";
                     }
                 }
-                if(organization != null)
+                else if(organization != null)
                 {
                     var password = context.Organizations.FirstOrDefault(e => e.Password == m.Password);
                     if (password != null)
@@ -52,7 +52,7 @@ namespace Universal_Chat_Plugin.Controllers
                         ViewBag.Error = "Your username & password does not match";
                     }
                 }
-                if (user != null)
+                else if (user != null)
                 {
                     var password = context.Users.FirstOrDefault(e => e.Password == m.Password);
                     if (password != null)
@@ -64,6 +64,10 @@ namespace Universal_Chat_Plugin.Controllers
                     {
                         ViewBag.Error = "Your username & password does not match";
                     }
+                }
+                else
+                {
+                    ViewBag.Error = "Your username & password does not match";
                 }
             }
             return View();

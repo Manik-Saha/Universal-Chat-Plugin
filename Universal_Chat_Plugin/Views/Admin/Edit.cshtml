@@ -86,7 +86,7 @@
         <div class="form-group">
             <label class="control-label col-md-2" for="DateOfBirth">DateOfBirth</label>
             <div class="col-md-10">
-                <input class="form-control text-box single-line" data-val="true" data-val-date="The field DateOfBirth must be a date." data-val-required="The DateOfBirth field is required." id="DateOfBirth" name="DateOfBirth" type="date" value="@Model.DateOfBirth" />
+                <input class="form-control text-box single-line" data-val="true" data-val-date="The field DateOfBirth must be a date." data-val-required="The DateOfBirth field is required." id="DateOfBirth" name="DateOfBirth" type="date" value="@Model.DateOfBirth.Date" />
                 @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -94,7 +94,7 @@
         <div class="form-group">
             <label class="control-label col-md-2" for="JoiningDate">JoiningDate</label>
             <div class="col-md-10">
-                <input class="form-control text-box single-line" data-val="true" data-val-date="The field JoiningDate must be a date." data-val-required="The JoiningDate field is required." id="JoiningDate" name="JoiningDate" type="date" value="@Model.JoiningDate" />
+                <input class="form-control text-box single-line" data-val="true" data-val-date="The field JoiningDate must be a date." data-val-required="The JoiningDate field is required." id="JoiningDate" name="JoiningDate" type="date" value="@Model.JoiningDate.Date" />
                 @Html.ValidationMessageFor(model => model.JoiningDate, "", new { @class = "text-danger" })
             </div>
         </div>
