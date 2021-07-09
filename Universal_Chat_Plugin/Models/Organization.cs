@@ -16,6 +16,7 @@ namespace Universal_Chat_Plugin.Models
         [Required]
         public string Name { get; set; }
         [Required]
+        [RegularExpression(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$", ErrorMessage = "Email is not valid.")]
         public string Email { get; set; }
         [Required]
         public string Address { get; set; }
@@ -26,6 +27,7 @@ namespace Universal_Chat_Plugin.Models
         [Required]
         public string Phone { get; set; }
         [Required]
+        [RegularExpression(@"^\w+([-+.']\w+)*\w+([-.]\w+)*\.\w+([-.]\w+)*$", ErrorMessage = "Website is not valid.")]
         public string Website { get; set; }
         //navigation property
         public ICollection<Payment> Payments { get; set; }
