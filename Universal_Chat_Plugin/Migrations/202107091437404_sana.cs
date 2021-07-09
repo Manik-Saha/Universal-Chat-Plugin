@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class ChatPlugin : DbMigration
+    public partial class sana : DbMigration
     {
         public override void Up()
         {
@@ -33,11 +33,13 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
-                        Email = c.String(),
-                        Address = c.String(),
-                        Phone = c.String(),
-                        Website = c.String(),
+                        Name = c.String(nullable: false),
+                        Email = c.String(nullable: false),
+                        Address = c.String(nullable: false),
+                        Username = c.String(nullable: false),
+                        Password = c.String(nullable: false),
+                        Phone = c.String(nullable: false),
+                        Website = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             

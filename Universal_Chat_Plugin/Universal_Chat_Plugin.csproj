@@ -128,19 +128,16 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OrganizationController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202107061445215_ChatPlugin.cs" />
-    <Compile Include="Migrations\202107061445215_ChatPlugin.designer.cs">
-      <DependentUpon>202107061445215_ChatPlugin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202107061827488_ChatPlugin1.cs" />
-    <Compile Include="Migrations\202107061827488_ChatPlugin1.designer.cs">
-      <DependentUpon>202107061827488_ChatPlugin1.cs</DependentUpon>
+    <Compile Include="Migrations\202107091437404_sana.cs" />
+    <Compile Include="Migrations\202107091437404_sana.designer.cs">
+      <DependentUpon>202107091437404_sana.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -201,6 +198,8 @@
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\User\Details.cshtml" />
     <Content Include="Views\User\Delete.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\UserRegistration.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -219,11 +218,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202107061445215_ChatPlugin.resx">
-      <DependentUpon>202107061445215_ChatPlugin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107061827488_ChatPlugin1.resx">
-      <DependentUpon>202107061827488_ChatPlugin1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202107091437404_sana.resx">
+      <DependentUpon>202107091437404_sana.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
